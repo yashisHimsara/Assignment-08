@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>person-walking</title>
+</head>
+
+<style>
+  #div1{
+    position: absolute;
+    top: 400px;
+    margin: auto;
+  }
+  #div2{
+    position: absolute;
+    top: 400px;
+    left: 425px;
+  }
+  #div3{
+    position: absolute;
+    top: 400px;
+    left: 850px;
+  }
+  #div4{
+    position: absolute;
+    top: 400px;
+    left: 1275px;
+  }
+  #div5{
+    position: absolute;
+    top: 400px;
+    left: 1700px;
+  }
+  #div6{
+    position: absolute;
+    top: 400px;
+    left: 2125px;
+  }
+</style>
+
+<body>
+
+<div id="div1"><img src="assets/img/tenor.gif">A</div>
+<div id="div2"><img src="assets/img/tenor.gif">B</div>
+<div id="div3"><img src="assets/img/tenor.gif">C</div>
+<div id="div4"><img src="assets/img/tenor.gif">D</div>
+<div id="div5"><img src="assets/img/tenor.gif">E</div>
+<div id="div6"><img src="assets/img/tenor.gif">F</div>
+
+</body>
+
+<script src="src/lib/jquery-3.6.1.min.js"></script>
+
+<script>
+  var array = ["A", "B", "C", "D", "E", "F"];
+
+  function Walking(){
+    let lastArray=array.pop();/**/
+    array.unshift(lastArray)
+    $('#div1').text(array[0]);
+    $('#div2').text(array[1]);
+    $('#div3').text(array[2]);
+    $('#div4').text(array[3]);
+    $('#div5').text(array[4]);
+    $('#div6').text(array[5]);
+
+  }
+
+  setInterval(Walking, 1000);
+</script>
+
+</html>
